@@ -9,6 +9,9 @@ Such information about individual players and their overall stats, existing real
 
 ## Roles
 Project Manager - Brendan
+
 Front End - McKenna
+
 Back End - Isaac/Helma
+
 Repo Manager/Utility - Stephen
