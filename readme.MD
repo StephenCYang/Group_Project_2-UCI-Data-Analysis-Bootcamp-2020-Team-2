@@ -8,10 +8,15 @@ This dashboard will assist fantasy soccer players in managing their teams. It us
 Such information about individual players and their overall stats, existing real life teams, and game performance will be displayed on a dashboard for easy analysis to identify which players are “hot” or not, and who should be rostered or benched for the next match.
 
 ## Roles
-Project Manager - Brendan
+Project Manager/SME - Brendan
 
 Front End - McKenna
 
 Back End - Isaac/Helma
 
-Repo Manager/Utility - Stephen
+Repo Manager/Utility/Mongo - Stephen
+
+## Progress
+July 6 - Initial group division of labor and subject selection.
+
+July 8 - Discussed what to pull out of the API that we're interested. Also found that someone created a Python wrapper for the FPL API. Added the wrapper's doc to the repo. Discussing if we'll use it or not.
