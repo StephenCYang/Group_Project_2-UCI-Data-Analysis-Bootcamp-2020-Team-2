@@ -14,7 +14,7 @@ Front End - McKenna
 
 Back End - Isaac/Helma
 
-Repo Manager/Utilit - Stephen
+Repo Manager/Sankey graphing - Stephen
 
 ## Progress
 July 6 - Initial group division of labor and subject selection.
