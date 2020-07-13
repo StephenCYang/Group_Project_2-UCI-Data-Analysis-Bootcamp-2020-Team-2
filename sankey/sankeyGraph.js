@@ -18,4 +18,3 @@ fetch(proxyUrl + targetUrl)
     console.log(e);
     return e;
   });
-  
