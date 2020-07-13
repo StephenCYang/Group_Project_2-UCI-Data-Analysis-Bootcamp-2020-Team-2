@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" 
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" 
+    crossorigin="anonymous">
+    <!-- Table: Material Design Bootstrap -->
+    <link rel="stylesheet" href="static/css/mdb.min.css">
+    <!-- Table: MDBootstrap Datatables  -->
+    <link href="static/css/datatables.min.css" rel="stylesheet">
+    <!-- CSS Link -->
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+
+    <title>Other Page-2</title>
+  </head>
+
+<body>
+  <!-- Navigation Section -->
+  <div class="navigation">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <!-- NAV WITH LOGO -->
+      <a class="nav-logo" href="index.html">
+        <img src="static/assets/soccer-player-logo.svg" alt="Logo" style="width:10px;">
+      </a>
+      
+      <!-- NAV WITH TEXT -->
+      <!-- <a class="navbar-brand" style="background-color: #00559f;" href="index.html">Fantasy Soccer</a> -->
+
+      <!-- NAVIGATION WITH DROPDOWN -->
+      <!-- small navigation -->
+      <button class="navbar-toggler  border border-white" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- regular navigation -->
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Dashboards
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="attackers.html">Attackers</a>
+              <a class="dropdown-item" href="midfielders.html">Midfielders</a>
+              <a class="dropdown-item" href="defenders.html">Defenders</a>
+              <a class="dropdown-item" href="goal keepers.html">Goal Keepers</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="other-1.html">Page 6</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="other-2.html">Page 7</a>
+          </li>
+        </ul>
+      </div>
+
+    </nav>
+  </div>
+  
+  <!--HERO SECTION-->
+  <div class="hero-image">
+    <img src="static/assets/hero-other-1.jpg"  alt="soccer stadium">
+    <div class="hero-text">
+      <h1 style="font-size:4vw;">OTHER DATA-2</h1>
+      <!-- <span class="hero-subtext">Data makes it come true.</span> -->
+    </div>
+  </div>
+
+  <!-- CONTENT SECTION -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-6">
+        <h3 class="title">Section Title</h3>
+          <hr>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Aenean lobortis augue et massa accumsan dictum. Lorem 
+            ipsum dolor sit amet, consectetur adipiscing elit. Nunc justo 
+            lectus, lacinia in tempor rutrum, molestie id ante. 
+            Morbi fermentum ligula vitae hendrerit dignissim. 
+            Orci varius natoque penatibus et magnis dis parturient montes, 
+            nascetur ridiculus mus. Duis molestie neque ac lobortis suscipit. 
+            Aliquam nulla diam, tincidunt quis neque in, sollicitudin tincidunt mi.</p>
+          <p>Aliquam porta dapibus luctus. Phasellus lacus erat, pellentesque ut nulla 
+            sit amet, eleifend sodales turpis. Morbi vitae dolor tellus. Sed non dui eu 
+            massa consequat pretium quis eget turpis. Donec et tellus vitae libero 
+            molestie varius vitae et dui. Donec eu elit vitae nibh tincidunt venenatis. 
+            Pellentesque eu est at justo congue bibendum ut vel libero.</p>
+      </div>
+      
+      <div class="col-lg-4 col-md-6">
+        <!-- Right box  -->
+        <div class="box">        
+          <img src="static/assets/image-placeholder.jpg"  alt="XXX">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER SECTION -->
+  <footer>
+    <div class="footer">Copyright &copy;2020 Brendan Barrow, Isaac Carranza, Helma Zecena, McKenna Miranda, Stephen Yang</div>
+  </footer>
+
+  <!-- ADDITIONAL SCRIPTS -->
+  <!-- Affects table search functionality & collapsable nav-->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous">
+  </script>
+
+  <!-- Affects nav dropdown-->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous">
+  </script>
+  
+  <!-- Data & JS Apps -->
+  <script src="static/js/data.js"></script>
+  <script src="static/js/app.js"></script>
+
+  <!-- Sortable & Searchable table functionality. -->
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="static/js/datatables.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('#dtBasicExample').DataTable();
+      $('.dataTables_length').addClass('bs-select');
+    });
+  </script>
+
+</body>
+</html>

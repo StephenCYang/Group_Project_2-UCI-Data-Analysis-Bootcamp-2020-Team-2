@@ -1,0 +1,158 @@
+/* BODY */
+body{
+    background-color: #f0f0f0;
+    height: 100%;
+}
+/* NAVBAR */
+    .navbar{
+        padding: .5%;
+        margin: 0;
+        background-color: #232323; 
+        font-size: 16px;
+        color: #ffffff !important;
+    }
+    /* Bootstrap's navbar-brand. used in place of nav logo */
+    .navigation .navbar-brand{
+        color:#ffffff; 
+        margin-left: 1%; 
+        padding: inherit; 
+        font-weight: bold;
+        background-color: #232323;
+        font-family: Arial, Helvetica, sans-serif'
+    }
+    .navbar-brand:hover{
+        color: rgb(243, 192, 24) !important;
+    }
+    /* Navigation logo on the left */
+    .nav-logo {
+        position: relative;
+        top: 10%;
+        bottom: 10%;
+        left: 2%;
+        width: 5%;
+    }
+    /* Navigation links on the left */
+    .nav-link {
+        color: #ffffff !important;
+    }
+    .nav-link:hover{
+        background-color: #9f0000;
+    }
+    /* Dropdown menu when NOT hovering or selected item */
+    .dropdown .dropdown-item{
+        color: #3d3d3d !important;
+        background-color: #ffffff;
+    }
+    /* Dropdown menu when hovering or selected item */
+    .dropdown .dropdown-menu .dropdown-item:active, .dropdown .dropdown-menu .dropdown-item:hover{
+        color: #ffffff !important;
+        background-color: #9f0000 !important;
+    }
+
+
+/* HERO SECTION*/
+    /* Position and center the image to scale nicely on all screens */
+    .hero-image {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+    /* Places text in the middle of hero image */
+    .hero-text {
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+    }
+    .hero-subtext{
+        color: white;
+        font-size: 20px;
+    }
+
+/* IMAGES */
+img{
+    width:100% !important;
+    height:100% !important;
+}
+.active, .panel:hover{
+    border-color:#9f0000;
+    border-style: solid; 
+    
+}
+.vizualization{
+    width:50% !important;
+    height:50% !important;
+}
+
+/* TITLE  */
+.title{
+    color: #9f0000;  
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder; 
+    padding-top: 25px; 
+}
+/* PARAGRAPH */
+p{
+    color: #3d3d3d;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.container {
+    max-height: fit-content;
+    margin-bottom: 4%;
+    padding: 10px 20px 30px 20px; 
+    background-color: #f0f0f0; 
+}
+
+/* BOX */
+.box {
+    margin-top: 22%; 
+    /* margin-bottom: 62px; 
+    padding: 10px 80px 10px;  */
+    color:black;
+    background-color: #f0f0f0; 
+}
+
+/* TABLE */
+  .table {
+    border-top-color: #9f0000; 
+}
+
+/* FOOTER */
+footer{
+    background-color: #232323; 
+    border-top-style: solid; 
+    border-top-width: 5px; 
+    border-top-color: #9f0000;
+    color: white; 
+    min-height: 55px; 
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px; 
+    text-align: center; 
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding-top: 15px; 
+}
+
+/* MEDIA QUERIES */
+@media(max-width: 992px){
+    .navbar-expand-lg{background-color: #232323 !important;}
+    .navbar{max-height: none; padding: inherit;}
+    .navbar div{margin: inherit; background-color: #232323;}
+    .navbar-brand{padding: 10px !important;}
+    .nav-logo{display: none;}
+    /* .dropdown-item{background-color: aqua;} */
+    .dropdown-item{color: #ffffff !important;}
+    /* .dropdown-item:hover{color: rgb(43, 179, 66) !important;} */
+    .hero-subtext { font-size: 14;}
+    .box {margin-top: 5%; margin-bottom: 15%;}
+    button{margin-right: 30px;}
+    button:focus {outline: 1px dotted; outline: 5px auto -webkit-focusring-color;}
+    footer {padding-left: 5%; padding-right: 5%;}
+}
