@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<script src="test3.js"></script> 
+
+<!-- CanvasJS is an api we haven't used in class -->
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+  
+<head>
+
+    <script>
+    window.onload = function () {
+    
+    var chart1 = new CanvasJS.Chart("ChartContainer1", {
+	animationEnabled: true,
+	title:{
+		text: "Points by Forwards",
+		horizontalAlign: "left"
+	},
+	data: [{
+		type: "doughnut",
+		startAngle: 60,
+		//innerRadius: 60,
+		indexLabelFontSize: 17,
+		indexLabel: "{label} - #percent%",
+		toolTipContent: "<b>{label}:</b> {y} (#percent%)",
+		dataPoints: [
+            { y: arsForwards[0].total_points, label: arsForwards[0].first_name + " " + arsForwards[0].second_name },
+            { y: arsForwards[1].total_points, label: arsForwards[1].first_name + " " + arsForwards[1].second_name },
+            { y: arsForwards[2].total_points, label: arsForwards[2].first_name + " " + arsForwards[2].second_name },
+            { y: arsForwards[3].total_points, label: arsForwards[3].first_name + " " + arsForwards[3].second_name },
+            { y: arsForwards[4].total_points, label: arsForwards[4].first_name + " " + arsForwards[4].second_name }
+		]
+	}]})
+
+    var chart2 = new CanvasJS.Chart("ChartContainer2", {
+        animationEnabled: true,
+        title:{
+            text: "Assists by Forwards",
+            horizontalAlign: "left"
+        },
+        data: [{
+            type: "doughnut",
+            startAngle: 60,
+            //innerRadius: 60,
+            indexLabelFontSize: 17,
+            indexLabel: "{label} - #percent%",
+            toolTipContent: "<b>{label}:</b> {y} (#percent%)",
+            dataPoints: [
+                { y: arsForwards[0].assists, label: arsForwards[0].first_name + " " + arsForwards[0].second_name },
+                { y: arsForwards[1].assists, label: arsForwards[1].first_name + " " + arsForwards[1].second_name },
+                { y: arsForwards[2].assists, label: arsForwards[2].first_name + " " + arsForwards[2].second_name },
+                { y: arsForwards[3].assists, label: arsForwards[3].first_name + " " + arsForwards[3].second_name },
+                { y: arsForwards[4].assists, label: arsForwards[4].first_name + " " + arsForwards[4].second_name }
+                ]
+    }]})
+    
+    var chart3 = new CanvasJS.Chart("ChartContainer3", {
+        animationEnabled: true,
+        title:{
+            text: "Points by Midfielders",
+            horizontalAlign: "left"
+        },
+        data: [{
+            type: "doughnut",
+            startAngle: 60,
+            //innerRadius: 60,
+            indexLabelFontSize: 17,
+            indexLabel: "{label} - #percent%",
+            toolTipContent: "<b>{label}:</b> {y} (#percent%)",
+            dataPoints: [
+                { y: arsMidfielders[0].total_points, label: arsMidfielders[0].first_name + " " + arsMidfielders[0].second_name },
+                { y: arsMidfielders[1].total_points, label: arsMidfielders[1].first_name + " " + arsMidfielders[1].second_name },
+                { y: arsMidfielders[2].total_points, label: arsMidfielders[2].first_name + " " + arsMidfielders[2].second_name },
+                { y: arsMidfielders[3].total_points, label: arsMidfielders[3].first_name + " " + arsMidfielders[3].second_name },
+                { y: arsMidfielders[4].total_points, label: arsMidfielders[4].first_name + " " + arsMidfielders[4].second_name },
+                { y: arsMidfielders[5].total_points, label: arsMidfielders[5].first_name + " " + arsMidfielders[5].second_name },
+                { y: arsMidfielders[6].total_points, label: arsMidfielders[6].first_name + " " + arsMidfielders[6].second_name },
+                { y: arsMidfielders[7].total_points, label: arsMidfielders[7].first_name + " " + arsMidfielders[7].second_name },
+                { y: arsMidfielders[8].total_points, label: arsMidfielders[8].first_name + " " + arsMidfielders[8].second_name },
+                { y: arsMidfielders[9].total_points, label: arsMidfielders[9].first_name + " " + arsMidfielders[9].second_name },
+                { y: arsMidfielders[10].total_points, label: arsMidfielders[10].first_name + " " + arsMidfielders[10].second_name },
+                { y: arsMidfielders[11].total_points, label: arsMidfielders[11].first_name + " " + arsMidfielders[11].second_name }
+               ]
+        }]})
+        
+    var chart4 = new CanvasJS.Chart("ChartContainer4", {
+        animationEnabled: true,
+        title:{
+            text: "Assists by Midfielders",
+            horizontalAlign: "left"
+        },
+        data: [{
+            type: "doughnut",
+            startAngle: 60,
+            //innerRadius: 60,
+            indexLabelFontSize: 17,
+            indexLabel: "{label} - #percent%",
+            toolTipContent: "<b>{label}:</b> {y} (#percent%)",
+            dataPoints: [
+                { y: arsMidfielders[0].assists, label: arsMidfielders[0].first_name + " " + arsMidfielders[0].second_name },
+                { y: arsMidfielders[1].assists, label: arsMidfielders[1].first_name + " " + arsMidfielders[1].second_name },
+                { y: arsMidfielders[2].assists, label: arsMidfielders[2].first_name + " " + arsMidfielders[2].second_name },
+                { y: arsMidfielders[3].assists, label: arsMidfielders[3].first_name + " " + arsMidfielders[3].second_name },
+                { y: arsMidfielders[4].assists, label: arsMidfielders[4].first_name + " " + arsMidfielders[4].second_name },
+                { y: arsMidfielders[5].assists, label: arsMidfielders[5].first_name + " " + arsMidfielders[5].second_name },
+                { y: arsMidfielders[6].assists, label: arsMidfielders[6].first_name + " " + arsMidfielders[6].second_name },
+                { y: arsMidfielders[7].assists, label: arsMidfielders[7].first_name + " " + arsMidfielders[7].second_name },
+                { y: arsMidfielders[8].assists, label: arsMidfielders[8].first_name + " " + arsMidfielders[8].second_name },
+                { y: arsMidfielders[9].assists, label: arsMidfielders[9].first_name + " " + arsMidfielders[9].second_name },
+                { y: arsMidfielders[10].assists, label: arsMidfielders[10].first_name + " " + arsMidfielders[10].second_name },
+                { y: arsMidfielders[11].assists, label: arsMidfielders[11].first_name + " " + arsMidfielders[11].second_name }
+               ]
+        }]});
+
+
+    
+    chart1.render();
+    chart2.render();
+    chart3.render();
+    chart4.render();
+    
+    }
+    </script>
+</head>
+<body>
+    <h1>Arsenal: Offense</h1>
+    <div id="ChartContainer1" style="height: 300px; width: 100%;"></div>
+    <hr>   
+    <div id="ChartContainer2" style="height: 300px; width: 100%;"></div>   
+    <hr>   
+    <div id="ChartContainer3" style="height: 300px; width: 100%;"></div>   
+    <hr>   
+    <div id="ChartContainer4" style="height: 300px; width: 100%;"></div>
+    <hr>
+    <a href="index.html">Back to Index</a>   
+</body>
+</html>

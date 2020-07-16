@@ -1,3 +1,6 @@
+//This file is named test3.js only because it's actually the 4th method I tried using for loading data from
+//the json. Rename as desired.
+
 const url = "https://fantasy.premierleague.com/api/bootstrap-static/"; // site that doesn’t send Access-Control-*
 
 function Get(yourUrl){
@@ -35,6 +38,8 @@ console.log(element_types)
 var teams = json_obj.teams;
 console.log("Teams")
 console.log(teams)
+
+// Everything below is just for the graph. Reuse as needed.
 
 // Break out teams and calc total points
 
@@ -179,6 +184,21 @@ var wolTotal = sumPoints(wolPlayers);
 console.log("total points for WOL:" + sumPoints(wolPlayers));
 
 
+// Break out a team's players by element_type
+arsForwards = arsPlayers.filter((player)=>player.element_type === 4)
+console.log("forwards")
+console.log(arsForwards);
+
+arsMidfielders = arsPlayers.filter((player)=>player.element_type === 3)
+console.log("midfielders")
+console.log(arsMidfielders);
+
+arsDefenders = arsPlayers.filter((player)=>player.element_type === 2)
+console.log("defenders")
+console.log(arsDefenders);
+
+arsGoalkeepers = arsPlayers.filter((player)=>player.element_type === 1)
+console.log("goalkeepers")
+console.log(arsGoalkeepers);
 
 
-                  
