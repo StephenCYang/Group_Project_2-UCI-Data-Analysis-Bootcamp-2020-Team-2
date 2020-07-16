@@ -86,8 +86,13 @@ function populateData(){
     cell.text((threat[i]));
 
     cell = row.append("td");
-    threat_per_goal = threat[i]/goals[i]
-    cell.text(Math.round(threat_per_goal || 0));
+    if (goals[i] === 0 || threat[i] === 0) {
+      cell.text(0)
+    } else {
+      threat_per_goal = threat[i]/goals[i]
+      cell.text(Math.round(threat_per_goal));
+    }
+
   }
  
 };
