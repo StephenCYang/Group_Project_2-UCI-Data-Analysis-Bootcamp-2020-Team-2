@@ -1,8 +1,5 @@
 // LOADING DATA
-var tableData = data_2;
-var tableData = d3.json("https://fantasy.premierleague.com/api/bootstrap-static/", function(data) {
-    console.log(data);
-});
+var tableData = test_table;
 
 // ADDING DATA TO TABLE
 var table = d3.select("tbody");
@@ -12,9 +9,6 @@ function populateData(){
 		var row = table.append("tr");
 
 		var cell = row.append("td");
-		cell.text(tableData[i].team);
-
-		cell = row.append("td");
 		cell.text(tableData[i].first_name);
 
 		cell = row.append("td");
@@ -25,6 +19,9 @@ function populateData(){
 
 		cell = row.append("td");
 		cell.text(tableData[i].total_points);
+
+		cell = row.append("td");
+		cell.text(tableData[i].team);
 	}
 };
 populateData(); // displaying the data to the user
@@ -35,3 +32,6 @@ populateData(); // displaying the data to the user
 // second_name
 // points_per_game
 // total_points
+
+//     console.log(data);
+// }):
