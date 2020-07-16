@@ -91,3 +91,4 @@ function populateData(){
   }
  
 };
+populateData(); // displaying the data to the user

@@ -1,5 +1,8 @@
 // LOADING DATA
 var tableData = data_2;
+var tableData = d3.json("https://fantasy.premierleague.com/api/bootstrap-static/", function(data) {
+    console.log(data);
+});
 
 // ADDING DATA TO TABLE
 var table = d3.select("tbody");
