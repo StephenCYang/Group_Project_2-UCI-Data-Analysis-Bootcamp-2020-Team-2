@@ -8,13 +8,17 @@ function Get(yourUrl){
 }
 
 var json_obj = JSON.parse(Get(url));
-//console.table(json_obj);
+console.log("Everything")
+console.log(json_obj);
 
 var players = json_obj.elements;
+console.log("Players")
 console.log(players)
 
 var element_types = json_obj.element_types;
+console.log("Element Types")
 console.log(element_types)
 
 var teams = json_obj.teams;
+console.log("Teams")
 console.log(teams)
