@@ -1,12 +1,66 @@
+<!DOCTYPE html>
 <html>
 
-<script src="test3.js">
+<script src="test3.js"></script> 
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
  
-</script>    
+   
 <head>
+    <script type="text/javascript">
+    window.onload = function () {
+	
+    var chart = new CanvasJS.Chart("chartContainer", {
+        animationEnabled: true,
+        
+        title:{
+            text:"Total Points per Team"
+        },
+        axisX:{
+            interval: 1
+        },
+        axisY2:{
+            interlacedColor: "rgba(1,77,101,.2)",
+            gridColor: "rgba(1,77,101,.1)",
+            title: "Points"
+        },
+        data: [{
+            type: "bar",
+            name: "companies",
+            axisYType: "secondary",
+            color: "#014D65",
+            dataPoints: [
+                
+                { y: wolTotal, label: teams[19].name },
+                { y: whuTotal, label: teams[18].name },
+                { y: watTotal, label: teams[17].name },
+                { y: totTotal, label: teams[16].name },
+                { y: souTotal, label: teams[15].name },
+                { y: shuTotal, label: teams[14].name },
+                { y: norTotal, label: teams[13].name },
+                { y: newTotal, label: teams[12].name },
+                { y: munTotal, label: teams[11].name },
+                { y: mciTotal, label: teams[10].name },
+                { y: livTotal, label: teams[9].name },
+                { y: leiTotal, label: teams[8].name },
+                { y: eveTotal, label: teams[7].name },
+                { y: cryTotal, label: teams[6].name },
+                { y: cheTotal, label: teams[5].name },
+                { y: burTotal, label: teams[4].name },
+                { y: bhaTotal, label: teams[3].name },
+                { y: bouTotal, label: teams[2].name },
+                { y: avlTotal, label: teams[1].name },
+                { y: arsTotal, label: teams[0].name }
+                
+            ]
 
+        }]
+    });
+    chart.render();
+     
+    }   
+        </script>
 </head>
 <body>
-
+    <div id="chartContainer" style="height: 300px; width: 100%;"></div>
 </body>
 </html>
