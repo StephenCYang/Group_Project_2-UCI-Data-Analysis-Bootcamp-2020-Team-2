@@ -22,3 +22,7 @@ July 6 - Initial group division of labor and subject selection.
 July 8 - Discussed what to pull out of the API that we're interested. Also found that someone created a Python wrapper for the FPL API. Added the wrapper's doc to the repo. Discussing if we'll use it or not.
 
 July 11 - Discussed more about the dashboard pages, compared with the examples to see what we wanted.
+
+July 13 - Mockup of page demoed.
+
+July 15 - Issues with loading JSON resolved. See test3.js in the test directory. May move away from Sankey graph in favor of stacked barchart or pie chart.
