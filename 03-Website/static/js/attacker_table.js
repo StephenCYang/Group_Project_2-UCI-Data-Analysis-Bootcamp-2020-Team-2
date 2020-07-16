@@ -86,7 +86,8 @@ function populateData(){
     cell.text((threat[i]));
 
     cell = row.append("td");
-    cell.text(threat[i]/goals[i]);
+    threat_per_goal = threat[i]/goals[i]
+    cell.text(Math.round(threat_per_goal || 0));
   }
  
 };
