@@ -15,7 +15,7 @@ fetch(proxyUrl + targetUrl)
   .then(data => {
     // var elements = data.elements
     for (var i = 0; i < data.elements.length; i++)   {
-        if ((data.elements[i].chance_of_playing_next_round != null) && (data.elements[i].yellow_cards >0)|| (data.elements[i].red_cards)) {
+        if((data.elements[i].yellow_cards >0)|| (data.elements[i].red_cards>0)  || ((data.elements[i].chance_of_playing_next_round <100) && (data.elements[i].chance_of_playing_next_round != null))) {
         first_name.push(data.elements[i].first_name);
         last_name.push(data.elements[i].second_name);
         red_cards.push(data.elements[i].red_cards)
