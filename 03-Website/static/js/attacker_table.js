@@ -1,99 +1,87 @@
-//Create empty arrays to extract data into.
-var assists = []
-var goals = []
-var first_name = []
-var last_name = []
-var form = []
-var points_per_game = []
-var selected_by_percent = []
-var total_points = []
-var value_form = []
-var now_cost = []
-var minutes = []
-var bonus = []
-var team = []
-var underrated = []
-var threat = []
-//Load the json from https://fantasy.premierleague.com/api/bootstrap-static/
-var proxyUrl = 'https://cors-anywhere.herokuapp.com/',
-    targetUrl = "https://fantasy.premierleague.com/api/bootstrap-static/"
-fetch(proxyUrl + targetUrl)
-  .then(blob => blob.json())
-  .then(data => {
-    // var elements = data.elements
-    for (var i = 0; i < data.elements.length; i++) {
-      if (data.elements[i].element_type === 4) {
-        assists.push(data.elements[i].assists);
-        goals.push(data.elements[i].goals_scored);
-        first_name.push(data.elements[i].first_name);
-        last_name.push(data.elements[i].second_name);
-        form.push(data.elements[i].form);
-        points_per_game.push(data.elements[i].points_per_game);
-        selected_by_percent.push(data.elements[i].selected_by_percent);
-        total_points.push(data.elements[i].total_points);
-        value_form.push(data.elements[i].value_form);
-        now_cost.push(data.elements[i].now_cost);
-        minutes.push(data.elements[i].minutes);
-        bonus.push(data.elements[i].bonus);
-        threat.push(data.elements[i].threat)
-    }}
-    populateData(); // displaying the data to the user
-    return data;
-  })
-  .catch(e => {
-    console.log(e);
-    return e;
-  });
+//This file is named test3.js only because it's actually the 4th method I tried using for loading data from
+//the json. Rename as desired.
 
-// Populate the data into the table
-var table = d3.select("tbody");
+const url = "https://fantasy.premierleague.com/api/bootstrap-static/"; // site that doesn’t send Access-Control-*
+
+function Get(yourUrl){
+    var Httpreq = new XMLHttpRequest(); // a new request
+    Httpreq.open("GET",yourUrl,false);
+    Httpreq.send(null);
+    return Httpreq.responseText;          
+}
+
+// // Calc total points
+// function sumPoints(team) {
+//     var totalPoints = 0
+//     for (player in team) {
+//         //console.log(arsPlayers[player].total_points);
+//         totalPoints += team[player].total_points;
+//         //console.log(totalPoints);
+//     }
+//     return totalPoints;
+// }
+
+
+var json_obj = JSON.parse(Get(url));
+console.log("Everything")
+console.log(json_obj);
+
+// Break out subtables
+var players = json_obj.elements;
+
+forwards = players.filter((player)=>player.element_type === 4)
+console.log("forwards")
+console.log(forwards);
+
 function populateData(){
+    // getData(function() {
+    var table = d3.select("tbody");
+      for (let i = 0; i < forwards.length; i++){
+          var row = table.append("tr");
+  
+          cell = row.append("td");
+          cell.text(forwards[i].first_name);
+  
+          cell = row.append("td");
+          cell.text(forwards[i].second_name);
+          
+          cell = row.append("td");
+          cell.text(forwards[i].total_points);
+  
+          cell = row.append("td");
+          cell.text(forwards[i].points_per_game);
+  
+          cell = row.append("td");
+          cell.text(forwards[i].goals_scored);
+          
+          cell = row.append("td");
+          cell.text(forwards[i].assists);
+  
+          cell = row.append("td");
+          cell.text(forwards[i].bonus);
 
-	for (let i = 0; i < total_points.length; i++){
-		var row = table.append("tr");
-
-		cell = row.append("td");
-		cell.text(first_name[i]);
-
-		cell = row.append("td");
-    cell.text(last_name[i]);
-    
-    cell = row.append("td");
-    cell.text(total_points[i]);
-
-		cell = row.append("td");
-		cell.text(points_per_game[i]);
-
-		cell = row.append("td");
-    cell.text(goals[i]);
-
-    cell = row.append("td");
-    cell.text(assists[i]);
-
-    cell = row.append("td");
-    cell.text(bonus[i]);
-
-    cell = row.append("td");
-    cell.text(form[i]);
-
-    cell = row.append("td");
-    cell.text(minutes[i]);
-
-    cell = row.append("td");
-    cell.text((now_cost[i])/10);
-
-    cell = row.append("td");
-    cell.text((threat[i]));
-
-    cell = row.append("td");
-    if (goals[i] === 0 || threat[i] === 0) {
-      cell.text(0)
-    } else {
-      threat_per_goal = threat[i]/goals[i]
-      cell.text(Math.round(threat_per_goal));
+          cell = row.append("td");
+          cell.text(forwards[i].form);
+          
+          cell = row.append("td");
+          cell.text(forwards[i].minutes);
+          
+          cell = row.append("td");
+          cell.text((forwards[i].now_cost)/10);
+          
+          cell = row.append("td");
+          cell.text((forwards[i].threat));
+  
+          cell = row.append("td");
+          if (forwards[i].goals_scored === 0 || forwards[i].threat === 0) {
+              cell.text(0)
+            } else {
+                threat_per_goal = forwards[i].threat/forwards[i].goals_scored
+                cell.text(Math.round(threat_per_goal));
+      }
+  
     }
+  // })
+  };
+  populateData()
 
-  }
- 
-};
-populateData(); // displaying the data to the user
