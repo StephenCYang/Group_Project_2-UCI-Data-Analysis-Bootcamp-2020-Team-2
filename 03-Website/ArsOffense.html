@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" 
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" 
+    crossorigin="anonymous">
+    <!-- Table: Material Design Bootstrap -->
+    <link rel="stylesheet" href="static/css/mdb.min.css">
+    <!-- Table: MDBootstrap Datatables  -->
+    <link href="static/css/datatables.min.css" rel="stylesheet">
+    <!-- CSS Link -->
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+    <script>
+        window.onload = function () {
+        
+        var chart1 = new CanvasJS.Chart("ChartContainer1", {
+        animationEnabled: true,
+        title:{
+            text: "Points by Forwards",
+            horizontalAlign: "left"
+        },
+        data: [{
+            type: "doughnut",
+            startAngle: 60,
+            //innerRadius: 60,
+            indexLabelFontSize: 17,
+            indexLabel: "{label} - #percent%",
+            toolTipContent: "<b>{label}:</b> {y} (#percent%)",
+            dataPoints: [
+                { y: arsForwards[0].total_points, label: arsForwards[0].first_name + " " + arsForwards[0].second_name },
+                { y: arsForwards[1].total_points, label: arsForwards[1].first_name + " " + arsForwards[1].second_name },
+                { y: arsForwards[2].total_points, label: arsForwards[2].first_name + " " + arsForwards[2].second_name },
+                { y: arsForwards[3].total_points, label: arsForwards[3].first_name + " " + arsForwards[3].second_name },
+                { y: arsForwards[4].total_points, label: arsForwards[4].first_name + " " + arsForwards[4].second_name }
+            ]
+        }]})
+    
+        var chart2 = new CanvasJS.Chart("ChartContainer2", {
+            animationEnabled: true,
+            title:{
+                text: "Assists by Forwards",
+                horizontalAlign: "left"
+            },
+            data: [{
+                type: "doughnut",
+                startAngle: 60,
+                //innerRadius: 60,
+                indexLabelFontSize: 17,
+                indexLabel: "{label} - #percent%",
+                toolTipContent: "<b>{label}:</b> {y} (#percent%)",
+                dataPoints: [
+                    { y: arsForwards[0].assists, label: arsForwards[0].first_name + " " + arsForwards[0].second_name },
+                    { y: arsForwards[1].assists, label: arsForwards[1].first_name + " " + arsForwards[1].second_name },
+                    { y: arsForwards[2].assists, label: arsForwards[2].first_name + " " + arsForwards[2].second_name },
+                    { y: arsForwards[3].assists, label: arsForwards[3].first_name + " " + arsForwards[3].second_name },
+                    { y: arsForwards[4].assists, label: arsForwards[4].first_name + " " + arsForwards[4].second_name }
+                    ]
+        }]})
+        
+        var chart3 = new CanvasJS.Chart("ChartContainer3", {
+            animationEnabled: true,
+            title:{
+                text: "Points by Midfielders",
+                horizontalAlign: "left"
+            },
+            data: [{
+                type: "doughnut",
+                startAngle: 60,
+                //innerRadius: 60,
+                indexLabelFontSize: 17,
+                indexLabel: "{label} - #percent%",
+                toolTipContent: "<b>{label}:</b> {y} (#percent%)",
+                dataPoints: [
+                    { y: arsMidfielders[0].total_points, label: arsMidfielders[0].first_name + " " + arsMidfielders[0].second_name },
+                    { y: arsMidfielders[1].total_points, label: arsMidfielders[1].first_name + " " + arsMidfielders[1].second_name },
+                    { y: arsMidfielders[2].total_points, label: arsMidfielders[2].first_name + " " + arsMidfielders[2].second_name },
+                    { y: arsMidfielders[3].total_points, label: arsMidfielders[3].first_name + " " + arsMidfielders[3].second_name },
+                    { y: arsMidfielders[4].total_points, label: arsMidfielders[4].first_name + " " + arsMidfielders[4].second_name },
+                    { y: arsMidfielders[5].total_points, label: arsMidfielders[5].first_name + " " + arsMidfielders[5].second_name },
+                    { y: arsMidfielders[6].total_points, label: arsMidfielders[6].first_name + " " + arsMidfielders[6].second_name },
+                    { y: arsMidfielders[7].total_points, label: arsMidfielders[7].first_name + " " + arsMidfielders[7].second_name },
+                    { y: arsMidfielders[8].total_points, label: arsMidfielders[8].first_name + " " + arsMidfielders[8].second_name },
+                    { y: arsMidfielders[9].total_points, label: arsMidfielders[9].first_name + " " + arsMidfielders[9].second_name },
+                    { y: arsMidfielders[10].total_points, label: arsMidfielders[10].first_name + " " + arsMidfielders[10].second_name },
+                    { y: arsMidfielders[11].total_points, label: arsMidfielders[11].first_name + " " + arsMidfielders[11].second_name }
+                   ]
+            }]})
+            
+        var chart4 = new CanvasJS.Chart("ChartContainer4", {
+            animationEnabled: true,
+            title:{
+                text: "Assists by Midfielders",
+                horizontalAlign: "left"
+            },
+            data: [{
+                type: "doughnut",
+                startAngle: 60,
+                //innerRadius: 60,
+                indexLabelFontSize: 17,
+                indexLabel: "{label} - #percent%",
+                toolTipContent: "<b>{label}:</b> {y} (#percent%)",
+                dataPoints: [
+                    { y: arsMidfielders[0].assists, label: arsMidfielders[0].first_name + " " + arsMidfielders[0].second_name },
+                    { y: arsMidfielders[1].assists, label: arsMidfielders[1].first_name + " " + arsMidfielders[1].second_name },
+                    { y: arsMidfielders[2].assists, label: arsMidfielders[2].first_name + " " + arsMidfielders[2].second_name },
+                    { y: arsMidfielders[3].assists, label: arsMidfielders[3].first_name + " " + arsMidfielders[3].second_name },
+                    { y: arsMidfielders[4].assists, label: arsMidfielders[4].first_name + " " + arsMidfielders[4].second_name },
+                    { y: arsMidfielders[5].assists, label: arsMidfielders[5].first_name + " " + arsMidfielders[5].second_name },
+                    { y: arsMidfielders[6].assists, label: arsMidfielders[6].first_name + " " + arsMidfielders[6].second_name },
+                    { y: arsMidfielders[7].assists, label: arsMidfielders[7].first_name + " " + arsMidfielders[7].second_name },
+                    { y: arsMidfielders[8].assists, label: arsMidfielders[8].first_name + " " + arsMidfielders[8].second_name },
+                    { y: arsMidfielders[9].assists, label: arsMidfielders[9].first_name + " " + arsMidfielders[9].second_name },
+                    { y: arsMidfielders[10].assists, label: arsMidfielders[10].first_name + " " + arsMidfielders[10].second_name },
+                    { y: arsMidfielders[11].assists, label: arsMidfielders[11].first_name + " " + arsMidfielders[11].second_name }
+                   ]
+            }]});
+    
+    
+        
+        chart1.render();
+        chart2.render();
+        chart3.render();
+        chart4.render();
+        
+        }
+        </script>
+
+    <title>Attacker Dash</title>
+  </head>
+
+<body>
+  <!-- NAVIGATION SECTION -->
+  <div class="navigation">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <!-- NAV WITH LOGO -->
+      <a class="nav-logo" href="index.html">
+        <img src="static/assets/soccer-player-logo.svg" alt="Logo" style="width:10px;">
+      </a>
+      
+      <!-- NAV WITH TEXT -->
+      <a class="navbar-brand" style="background-color: #00559f;" href="index.html">Fantasy Soccer</a>
+
+      <!-- NAVIGATION WITH DROPDOWN -->
+      <!-- small navigation -->
+      <button class="navbar-toggler  border border-white" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- NAVIGATION MENU -->
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Dashboards
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="attackers.html">Attackers</a>
+              <a class="dropdown-item" href="midfielders.html">Midfielders</a>
+              <a class="dropdown-item" href="defenders.html">Defenders</a>
+              <a class="dropdown-item" href="goal keepers.html">Goal Keepers</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="other-1.html">Page 6</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="other-2.html">Page 7</a>
+          </li>
+        </ul>
+      </div>
+
+    </nav>
+  </div>
+  
+  <!--HERO SECTION-->
+  <div class="hero-image">
+    <img src="static/assets/hero-attackers.jpg"  alt="soccer stadium">
+    <div class="hero-text">
+      <h1 style="font-size:4vw;">ATTACKERS</h1>
+      <!-- <span class="hero-subtext">Data makes it come true.</span> -->
+    </div>
+  </div>
+
+  <!-- CONTENT SECTION -->
+    <div class="container">
+        <div class="row margin-top-50">
+          <div class="table-description">
+            <h3 class="title">Stats for Arsenal's Offense</h3>
+            <br>
+          </div>
+          <div id="ChartContainer1" style="height: 300px; width: 100%;"></div>
+            <hr>   
+            <div id="ChartContainer2" style="height: 300px; width: 100%;"></div>   
+            <hr>   
+            <div id="ChartContainer3" style="height: 300px; width: 100%;"></div>   
+            <hr>   
+            <div id="ChartContainer4" style="height: 300px; width: 100%;"></div>
+
+          <footer>
+            <div class="footer">Copyright &copy;2020 Brendan Barrow, Isaac Carranza, Helma Zecena, McKenna Miranda, Stephen Yang</div>
+          </footer>
+          
+  <!-- Affects nav dropdown-->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous">
+  </script>
+
+  <script type="text/javascript" src="static/js/ArsOffense.js"></script>
+  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+  
+
+</body>
+</html>
