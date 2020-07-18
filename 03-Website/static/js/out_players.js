@@ -2,8 +2,8 @@
 var total_points = []
 var first_name = []
 var last_name = []
-//var red_cards = []
-//var yellow_cards = []
+var red_cards = []
+var yellow_cards = []
 //var minutes = []
 var chance_of_playing = []
 var news = []
@@ -14,12 +14,12 @@ fetch(proxyUrl + targetUrl)
   .then(blob => blob.json())
   .then(data => {
     // var elements = data.elements
-    for (var i = 0; i < data.elements.length; i++) {
-        if ((data.elements[i].chance_of_playing_next_round != null) && (data.elements[i].chance_of_playing_next_round < 100)) {
+    for (var i = 0; i < data.elements.length; i++)   {
+        if ((data.elements[i].chance_of_playing_next_round != null) && (data.elements[i].yellow_cards >0)|| (data.elements[i].red_cards)) {
         first_name.push(data.elements[i].first_name);
         last_name.push(data.elements[i].second_name);
-        //red_cards.push(data.elements[i].red_cards)
-        //yellow_cards.push(data.elements[i].yellow_cards)
+        red_cards.push(data.elements[i].red_cards)
+        yellow_cards.push(data.elements[i].yellow_cards)
         total_points.push(data.elements[i].total_points);
         //minutes.push(data.elements[i].minutes);
         chance_of_playing.push(data.elements[i].chance_of_playing_next_round)
@@ -35,7 +35,7 @@ fetch(proxyUrl + targetUrl)
     console.log(e);
     return e;
   });
-//(data.elements[i].chance_of_playing_next_round < 100) && (data.elements[i].chance_of_playing_next_round >=0)// Populate the data into the table
+//&& (data.elements[i].chance_of_playing_next_round < 100)  
 var table = d3.select("tbody");
 function populateData(){
 
@@ -48,11 +48,11 @@ function populateData(){
         cell = row.append("td");
         cell.text(last_name[i]);
     
-        //cell = row.append("td");
-        //cell.text(red_cards[i]);
+        cell = row.append("td");
+        cell.text(red_cards[i]);
 
-        //cell = row.append("td");
-        //cell.text(yellow_cards[i]);
+        cell = row.append("td");
+        cell.text(yellow_cards[i]);
 
         //cell = row.append("td");
         //cell.text(total_points[i]);
