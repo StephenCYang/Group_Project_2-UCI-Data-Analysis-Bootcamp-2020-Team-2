@@ -1,4 +1,4 @@
-# Project 2 - Group 2 Proposal
+# Project 2 - Group 2
 Brendan Barrow, Isaac Carranza, Helma Zecena, McKenna Miranda, Stephen Yang
 
 ## Fantasy Soccer Dashboard
@@ -24,4 +24,4 @@ July 13 - Mockup of page demoed.
 
 July 15 - Issues with loading JSON resolved. See test3.js in the test directory. May move away from Sankey graph in favor of stacked barchart or pie chart.
 
-July 18 - Graphs for Arsenal's offense and defense added to site. Graphs changed to donut instead of sankey. Attackers table now pulls using same code as provided the 15th. 
+July 18 - Graphs for Arsenal's offense and defense added to site. Graphs changed to donut instead of sankey. Attackers table now pulls using same code as provided the 15th. Table for suspensions and injuries added. Site 99% complete. Just needs some additional text and final cleanup.
