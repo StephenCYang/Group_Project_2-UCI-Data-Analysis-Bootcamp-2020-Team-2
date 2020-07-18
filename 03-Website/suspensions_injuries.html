@@ -17,7 +17,7 @@
     <!-- CSS Link -->
     <link rel="stylesheet" type="text/css" href="static/css/style.css">
 
-    <title>Out Players</title>
+    <title>Suspensions and Injuries</title>
   </head>
 
 <body>
@@ -30,7 +30,7 @@
       </a>
       
       <!-- NAV WITH TEXT -->
-      <!-- <a class="navbar-brand" style="background-color: #00559f;" href="index.html">Fantasy Soccer</a> -->
+      <a class="navbar-brand" style="background-color: #00559f;" href="index.html">Fantasy Soccer</a>
 
       <!-- NAVIGATION WITH DROPDOWN -->
       <!-- small navigation -->
@@ -69,11 +69,11 @@
     </nav>
   </div>
   
-    <!--HERO SECTION-->
+  <!--HERO SECTION-->
   <div class="hero-image">
     <img src="static/assets/hero-attackers.jpg"  alt="soccer stadium">
     <div class="hero-text">
-      <h1 style="font-size:4vw;">Out Players</h1>
+      <h1 style="font-size:4vw;">Suspensions and Injuries</h1>
       <!-- <span class="hero-subtext">Data makes it come true.</span> -->
     </div>
   </div>
@@ -82,7 +82,7 @@
   <div class="container">
     <div class="row margin-top-50">
       <div class="table-description">
-        <h3 class="title">Players to Avoid</h3>
+        <h3 class="title">Suspensions and Injuries</h3>
         <br>
       </div>
     
@@ -93,11 +93,10 @@
           <tr>
             <th class="table-head">First Name</th>
             <th class="table-head">Second Name</th>
+            <th class="table-head">Chance of Playing Next Round</th>
+            <th class="table-head">News</th>
             <th class="table-head">Yellow Cards</th>
             <th class="table-head">Red Cards</th>
-            <th class="table-head">Chance of Playing</th>
-            <th class="table-head">News</th>
-
           </tr>
         </thead>
         <tbody></tbody>
@@ -106,7 +105,13 @@
     </div>
   </div>
 
+  <!-- Data & JS Apps -->
+  <!-- XXX this next line is a test using the attacker_table to populate data -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+  <script src="static/js/suspensions_injuries.js"></script>
+  <!-- <script src="static/js/app.js"></script> -->
   <!-- FOOTER SECTION -->
+
   <footer>
     <div class="footer">Copyright &copy;2020 Brendan Barrow, Isaac Carranza, Helma Zecena, McKenna Miranda, Stephen Yang</div>
   </footer>
@@ -124,21 +129,17 @@
     crossorigin="anonymous">
   </script>
   
-  <!-- Data & JS Apps -->
-  <!-- XXX this next line is a test using the attacker_table to populate data -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
-  <script src="static/js/out_players.js"></script>
-  <!-- <script src="static/js/app.js"></script> -->
+
 
   <!-- Sortable & Searchable table functionality. -->
   <!-- Bootstrap tooltips -->
-    <!--<script type="text/javascript" src="static/js/datatables.min.js"></script>
+  <script type="text/javascript" src="static/js/datatables.min.js"></script>
   <script>
     $(document).ready(function () {
       $('#dtBasicExample').DataTable();
       $('.dataTables_length').addClass('bs-select');
     });
-  </script> -->
+  </script>
   
 
 </body>
