@@ -16,6 +16,7 @@ console.log(json_obj);
 
 // Break out subtables
 var players = json_obj.elements;
+var teams = json_obj.teams;
 
 goalkeepers = players.filter((player)=>player.element_type === 1)
 console.log("forwards")
@@ -33,6 +34,14 @@ function populateData(){
           cell = row.append("td");
           cell.text(goalkeepers[i].second_name);
           
+          cell = row.append("td");
+          var teamcode = goalkeepers[i].team
+          for (let j = 0; j < teams.length; j++) {
+            if (teamcode === teams[j].id) {
+              cell.text(teams[j].name)
+            }
+          }
+
           cell = row.append("td");
           cell.text(goalkeepers[i].total_points);
   
